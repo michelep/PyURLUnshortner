@@ -27,13 +27,13 @@ def do_request(url, cookies=False):
     cookies = requests.cookies.RequestsCookieJar()
     try:
         if 'location' in r.headers:
-            print("%d\t%f ms\t%d\t%s"%(hop,(time.perf_counter()-timer)*1000,r.status_code,r.headers['location']))
+            print("%d\t%fms\t%d\t%s"%(hop,(time.perf_counter()-timer)*1000,r.status_code,r.headers['location']))
             hop = hop + 1
             return do_request(r.headers['location'], cookies)
     except:
         None
 
-    print("%d\t%f ms\t%d\t%s"%(hop,(time.perf_counter()-timer)*1000,r.status_code,r.url))
+    print("%d\t%fms\t%d\t%s"%(hop,(time.perf_counter()-timer)*1000,r.status_code,r.url))
     return False
 
 def main():
