@@ -1,6 +1,6 @@
 # PyURLUnshortner
 
-A simple **Python URL unshortner**
+A simple **Python command-line URL unshortner**
 
 Quick and dirty script i wrote to track down phishing URLs. Few lines of code to unshorten URLs tracking HTTP connections through redirects, with timeout.
 
